@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>صفحة محمية بكلمة سر</title>
+<script>
+function checkPassword() {
+    var password = document.getElementById("password").value;
+    var correctPassword = "1234"; // حطي كلمة السر اللي بدك ياها
+    if(password === correctPassword){
+        window.location.href = "https://protectedareas.baserow.site"; // رابط الـ Baserow
+    } else {
+        alert("كلمة السر خاطئة!");
+    }
+}
+</script>
+</head>
+<body style="text-align:center; margin-top:100px; font-family:sans-serif;">
+<h2>أدخل كلمة السر للوصول للصفحة</h2>
+<input type="password" id="password" placeholder="كلمة السر">
+<button onclick="checkPassword()">دخول</button>
+</body>
+</html>
